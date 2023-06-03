@@ -1,0 +1,33 @@
+.bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 25%;
+}
+
+.searchInput {
+	display: flex;
+	font-family: 'Lucida Sans';
+	color: rgb(17, 26, 16);
+	width: 16em;
+    height: 2.4em;
+	border-radius: 0.5em;
+    background-color: rgb(115, 109, 148);
+	padding: 0em;
+}
+
+.searchButton {
+	display: flex;
+	font-family: 'Lucida Sans';
+	color: rgb(58, 206, 58);
+	width: 8em;
+    height: 2.8em;
+	border-radius: 1em;
+    border: #92b5b9;
+	background-color: rgb(67, 35, 185);
+	padding: 0.8em;
+}
+.searchButton:hover {
+	filter: brightness(150%);
+}

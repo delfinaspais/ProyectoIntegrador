@@ -1,0 +1,26 @@
+.container {
+    background-color: red;
+    /* display: contents; */
+  /* justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 150px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, .2); */
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 200px;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background: rgba(50, 66, 64, 0.5);
+/* border: 1px solid #56d3ba; */
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(136, 231, 214, 0.37);
+  padding: 30px;
+
+}
