@@ -1,0 +1,64 @@
+.container {
+    
+    width:  300px;
+    height: 430px;
+    border-radius: 10px;
+    margin: 15px;
+    text-align: center;
+  position: relative;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+
+}
+
+.closeButton {
+    flex-direction: row;
+    border: 0px;
+    background: rgb(110, 28, 28);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonContainer button {
+    flex-direction: row;
+    border: 0px;
+    background: rgb(110, 28, 28);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 4px;
+    transition: 0.5s;
+    
+}
+
+.dataContainer {
+    text-align: center;
+    padding: 1px;
+}
+
+.dataContainer h2 {
+    margin: 2 px;
+    font-size: 16 px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.dataContainer h4 {
+    margin: 2 px;
+    font-size: 12 px;
+}
+
+.container img {
+    width: "20px";
+    border-radius: "70%";
+}
+
+
