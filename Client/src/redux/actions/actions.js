@@ -1,20 +1,48 @@
+import axios from "axios";
 import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./types.js"
 
-export const addFav = (character) => { // Recibe un personaje por parametro
-    return {
-        type: ADD_FAV,
-        payload: character             // Esto recibe el reducer, se lo llama igual que al param
-    }
+export const addFav = (character) => { 
+    
+    const endpoint = 'http://localhost:3001/rickandmorty/fav';
+    return async (dispatch) => {
+        try {
+            const { data } = await axios.post(endpoint, character)
+
+            // if (!data.length) throw Error ("No hay favoritos")
+
+            return dispatch({
+            type: ADD_FAV,
+            payload: data,
+         });
+        } catch (error) {
+            console.log(error.message);
+        }
+       };
+    };
+
+
+export const removeFav = (id) => { 
+    const endpoint = `http://localhost:3001/rickandmorty/fav/${id}`
+    return async (dispatch) => {
+        try {
+            const { data } = await axios.delete(endpoint);
+
+            // if (!data.length) throw Error ("No hay favoritos")
+
+            return dispatch({
+               type: REMOVE_FAV,
+               payload: data,
+            });
+
+        } catch (error) {
+            console.log(error.message);
+
+        }
+    
+    };
 }
 
-export const removeFav = (id) => { // Tiene que estar habilitada para recibir un id
-    return {
-        type: REMOVE_FAV,
-        payload: id
-    }
-}
-
-export const filterCards = (gender) => { // Tiene que estar habilitada para recibir un id
+export const filterCards = (gender) => { 
     return {
         type: FILTER,
         payload: gender

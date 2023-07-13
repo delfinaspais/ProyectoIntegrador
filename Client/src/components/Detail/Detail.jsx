@@ -8,9 +8,8 @@ const Detail = () => {
 
     const [character, setCharacter] = useState({});
 
-    useEffect (() => {          // Cuando el componente se monta
+    useEffect (() => {         
     
-        // fetch(`http://rickandmortyapi.com/api/character/${detailId}`) 
      axios(`http://localhost:3001/rickandmorty/character/${id}`)
     .then(( {data} ) => {
         if (data.name) {
@@ -48,5 +47,5 @@ const Detail = () => {
 
 export default Detail;
 
-// pregunta ? positiva : negativa = ternario
+
 

@@ -2,12 +2,12 @@ import React, {useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "../Card/Card";
 import { removeFav, filterCards, orderCards } from "../../redux/actions/actions";
-// import styles from "./Favorites.module.css";
+import styles from "./Favorites.module.css";
 
 
 const Favorites = () => {
 
-    const favorites = useSelector((state) => state.myFavorites) // Para que el cambio de redux se refleje en react. Re-renderizado
+    const favorites = useSelector((state) => state.myFavorites) 
     
     const [aux, setAux] = useState(false);
     
@@ -29,7 +29,7 @@ const Favorites = () => {
 
 
     return (
-        <div>
+        <div className={styles.favConteiner}>
             <div>
                 
                 <select name="" id="" onChange={handleFilter}>
@@ -50,7 +50,7 @@ const Favorites = () => {
                     <option value="D">Descendente</option>
                 </select>
 
-                {favorites.map(({id, name, species, gender, image, onClose}) => {
+                {favorites.map(({id, name, species, gender, image, origin, onClose}) => {
                     return (
                         <Card
                         key={id}
@@ -59,6 +59,7 @@ const Favorites = () => {
                         species={species}
                         gender={gender}
                         image={image}
+                        origin={origin.name}
                         onClose={onClose}
                         />
                      )

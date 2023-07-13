@@ -3,15 +3,15 @@ import { useState } from "react";
 import validation from "./validation.js";
 
 
-const Form = () => {
+const Form = ({login}) => {
 
     const [userData, setUserData] = useState({
-        username: "",
+        email: "",
         password: "",
     });
 
     const [errors, setErrors] = useState({
-        username: "",
+        email: "",
         password: "",
     });
 
@@ -25,49 +25,26 @@ const Form = () => {
         
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        login(userData);
+    }
+
 
   return (
-    //     <div className={style.container}>
-    //     <form>
-    //         <label classname={style.labeldi}>Username: </label>
-    //         <input
-    //         type="text"
-    //         name="username"
-    //         value={userData.username}
-    //         onChange={handleInputChange}
-    //         >
-    //         </input>
-    //         <p className={style.errors}>{errors.username && errors.username}</p>
-        
-
-        
-    //     <label>Password: </label>
-    //         <input
-    //         type="password"
-    //         name="password"
-    //         value={userData.password}
-    //         onChange={handleInputChange}
-    //         />
-    //         <p className={style.errors}>{errors.password && errors.password}</p>
-
-    //     <button className={style.loginbutton}>Login</button>
-
-    // </form>
-    //     </div>
-   // )
-
-   <section>
+      
+      <section>
         <div className={style.formbox}>
-                    <form>
+                    <form onSubmit={handleSubmit}> 
                     <h2>Login</h2>
                     <div className={style.inputbox}>
-                    <input type="text" name="username" value={userData.username} onChange={handleInputChange} />
-                        <label for="">Email</label>
-                        <p className={style.errors}>{errors.username && errors.username}</p>
+                    <input type="text" name="email" value={userData.email} onChange={handleInputChange} />
+                        <label htmlFor="">Email</label>
+                        <p className={style.errors}>{errors.email && errors.email}</p>
                     </div>
                     <div className={style.inputbox}>
                         <input type="password" name="password" value={userData.password} onChange={handleInputChange} />
-                        <label for="">Password</label>
+                        <label htmlFor="">Password</label>
                         <p className={style.errors}>{errors.password && errors.password}</p>
                     </div>
                                          
@@ -79,5 +56,38 @@ const Form = () => {
         
     </section>
     )
-    }
+}
 export default Form;
+
+
+
+
+
+//     <div className={style.container}>
+//     <form>
+//         <label classname={style.labeldi}>Username: </label>
+//         <input
+//         type="text"
+//         name="username"
+//         value={userData.username}
+//         onChange={handleInputChange}
+//         >
+//         </input>
+//         <p className={style.errors}>{errors.username && errors.username}</p>
+    
+
+    
+//     <label>Password: </label>
+//         <input
+//         type="password"
+//         name="password"
+//         value={userData.password}
+//         onChange={handleInputChange}
+//         />
+//         <p className={style.errors}>{errors.password && errors.password}</p>
+
+//     <button className={style.loginbutton}>Login</button>
+
+// </form>
+//     </div>
+// )

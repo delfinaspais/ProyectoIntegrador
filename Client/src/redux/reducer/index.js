@@ -5,20 +5,19 @@ const initialState = {
     allCharacters: []
 }
 
-const rootReducer = (state = initialState, {type, payload}) => { // es una Funcion que nos deja evaluar distintos casos 
+const rootReducer = (state = initialState, {type, payload}) => {  
     switch (type) {
         case ADD_FAV:
             return {
                 ...state,
-                myFavorites: [...state.allCharacters, payload], // REDUX ESPERA QUE SE CAMBIE LA REFERENCIA, CREANDO UN NUEVO OBJ
-                allCharacters: [...state.allCharacters, payload] 
+                myFavorites: payload, 
+                allCharacters: payload
             }
             
         case REMOVE_FAV:
             return {
                 ...state,
-                myFavorites: state.allCharacters.filter(({id}) => id.toString !== payload),
-                allCharacters: state.allCharacters.filter(({id}) => id.toString !== payload)
+                myFavorites: payload,
             }
   
         case FILTER:

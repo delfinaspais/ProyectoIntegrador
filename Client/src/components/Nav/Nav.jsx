@@ -19,29 +19,3 @@ const Nav = ({ onSearch }) => {
 
 export default Nav;
 
-// class Nav extends React.Component {
-//     constructor(props) {
-//         super(props)
-//     }
-    
-//     render () {
-//         return (
-//         <div>
-
-//             <SearchBar onSearch={this.props.onSearch}/>
-
-//         </div>
-
-//         )}
-// }
-
-                                       
-
-//                                        // onSearch esta en las PROPS de Nav : SearchBar onSearch = {props.onSearch}
-// export const Nav = ({onSearch}) => {   // Este componente esta entre App y SearchBar. Ahora Nav tendra que recibir de App Nav y Nav pasarle el on search a searchbar. Es ahroa el intermediario
-//     return 
-//     <div className="styled.container">
-//         <h1>Navbar</h1>
-//         <SearchBar on Search={(characterID) => window.alert(characterID)} />
-//     </div>
-// }

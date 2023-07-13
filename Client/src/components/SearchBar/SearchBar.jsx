@@ -1,12 +1,12 @@
 import { useState } from "react";
 import style from "./SearchBar.module.css"
 
-const SearchBar = ( {onSearch} ) => {                // Viene de su padre App.
+const SearchBar = ( {onSearch} ) => {                // Viene de App.
 
    const [id, setId] = useState("")
 
    const handleChange = (event) => {
-      setId(event.target.value)                      // Es quien ejecuta (el input) y el .value es lo que esta escrito
+      setId(event.target.value)               
    }
 
     return (
@@ -19,6 +19,3 @@ const SearchBar = ( {onSearch} ) => {                // Viene de su padre App.
  
  export default SearchBar;
 
- // funcion que ejecuta a onsearch
-
- // <div className={style.bar}>

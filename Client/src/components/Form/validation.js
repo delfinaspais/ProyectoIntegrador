@@ -1,25 +1,25 @@
-const validation = (inputs) => {
+const validation = (inputs) => { // (userData)
     
     const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const regexPass = new RegExp("[0-9]");
     const errors = {};
  
-    if (!regexEmail.test (inputs.username)) {
-        errors.username = "email invalido"
+    if (!regexEmail.test (inputs.email)) {
+        errors.email = "email invalido"
     }
-    if (!inputs.username) {
-        errors.username = "el nombre es obligatorio"
+    if (!inputs.email) {
+        errors.email = "el nombre es obligatorio"
     }
-    if(inputs.username.length > 35) {
-        errors.username = "maximo 35 caracteres "
-    }
-
-    if (!regexPass.test (inputs.username)) {
-        errors.password = "al menos un numero"
+    if(inputs.email.length > 35) {
+        errors.email = "maximo 35 caracteres "
     }
 
-    if(inputs.username.length < 6 && inputs.username.length > 10 ) {
-        errors.username = "entre 6 y 10 caracteres "
+    if (!regexPass.test (inputs.email)) {
+        errors.email = "al menos un numero"
+    }
+
+    if(inputs.email.length < 6 && inputs.email.length > 10 ) {
+        errors.email = "entre 6 y 10 caracteres "
     }
 console.log(errors, "errors")
     return errors;

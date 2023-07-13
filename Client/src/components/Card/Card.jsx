@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 function Card ({id, name, species, gender, image, onClose, removeFav, addFav, myFavorites}) { 
 
-   const [isFav, setIsFav] = useState(false) // Para ver el boton
+   const [isFav, setIsFav] = useState(false) 
 
    const handleFavorite = (event) => {
       event.preventDefault();
@@ -21,8 +21,8 @@ function Card ({id, name, species, gender, image, onClose, removeFav, addFav, my
    }
 
    useEffect(() => {
-      myFavorites.forEach((fav) => { // Se fija si la card que tenemos montadaa esta en el array de favotirtos
-         if (fav.id === {id}) {
+      myFavorites.forEach((fav) => { 
+         if (fav.id === id) { // {id}
             setIsFav(true);
          }
       });
@@ -52,18 +52,18 @@ function Card ({id, name, species, gender, image, onClose, removeFav, addFav, my
    );
 };
 
-export function mapDispatchToProps(dispatch) {  // Le da la posibilidad al componente de hacer dispatch
+export function mapDispatchToProps(dispatch) { 
 return {
    addFav: (character) => dispatch(addFav(character)),
    removeFav: (id) => dispatch(removeFav(id))
 }}
 
 
-export function mapStateToProps(state) {  // Me trae el estado global
+export function mapStateToProps(state) { 
 return {
    myFavorites: state.myFavorites
 }}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Card) // Aca conectamos con card el connect hace de hook. Le pasa mapState(se puede pasar null si no quqremos pasar estado global, y segundo argumneto mapdispatch)
+export default connect(mapStateToProps, mapDispatchToProps)(Card) 
                                            
 

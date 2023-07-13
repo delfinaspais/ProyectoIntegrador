@@ -6,7 +6,7 @@ console.log(characters);
    return (
 
       <CardsContainer>
-         {characters.map(({ id, type, location, name, species, gender, image }) => { // Lo que reciba es una funcion que mapea cada char y devuelve el char
+         {characters.map(({ id, type, location, name, origin, species, gender, image }) => { 
             return (
 
                <Card                   
@@ -16,6 +16,7 @@ console.log(characters);
                name={name}
                species={species}
                gender={gender}
+               origin={origin.name}
                image={image} 
                onClose={onClose}
                />
@@ -25,8 +26,7 @@ console.log(characters);
       </CardsContainer>
       
       )
-     
+      
    };
-       
-
-export default Cards;
+   
+   export default Cards;

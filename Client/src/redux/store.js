@@ -1,4 +1,4 @@
-import {createStore, applyMiddleware, compose} from "redux" // Middleware nos permite hacer thunk
+import {createStore, applyMiddleware, compose} from "redux" 
 import thunk from "redux-thunk"
 import rootReducer from "./reducer"
 
