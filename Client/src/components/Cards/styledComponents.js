@@ -11,6 +11,9 @@ margin: auto;
 padding: 0em;
 border-radius: 15px;
 // box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+.no-underline {
+    text-decoration: none;
+  }
 `;
 
 

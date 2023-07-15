@@ -6,17 +6,17 @@ console.log(characters);
    return (
 
       <CardsContainer>
-         {characters.map(({ id, type, location, name, origin, species, gender, image }) => { 
+         {characters.map(({ id, status, name, origin, species, gender, image }) => { 
+            
             return (
 
                <Card                   
                id={id}
-               type={type}
-               location={location}
+               status={status}
                name={name}
                species={species}
                gender={gender}
-               origin={origin.name}
+               origin={origin}
                image={image} 
                onClose={onClose}
                />

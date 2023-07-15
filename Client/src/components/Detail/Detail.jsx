@@ -28,11 +28,12 @@ const Detail = () => {
                 character.id ?
 
                ( <> */}
-               <h1>{character.id}</h1>
+               
                 <h2>{character.name}</h2>
             <p>{character.status}</p>
             <p>{character.species}</p>
             <p>{character.gender}</p>
+            <p>{character.origin}</p>
             <img src={character.image} alt="img" />
                 {/* </> ) */}
 {/* 

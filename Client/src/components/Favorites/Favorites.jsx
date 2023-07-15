@@ -50,16 +50,17 @@ const Favorites = () => {
                     <option value="D">Descendente</option>
                 </select>
 
-                {favorites.map(({id, name, species, gender, image, origin, onClose}) => {
+                {favorites.map(({id, name, species, gender, image, origin, status, onClose}) => {
                     return (
                         <Card
                         key={id}
                         id={id}
                         name={name}
+                        status={status}
                         species={species}
                         gender={gender}
                         image={image}
-                        origin={origin.name}
+                        origin={origin}
                         onClose={onClose}
                         />
                      )
