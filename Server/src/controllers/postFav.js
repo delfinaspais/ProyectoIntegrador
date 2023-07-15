@@ -2,6 +2,7 @@ const { Favorite } = require("../DB_connection");
 
 const postFav = async (req, res) => {
     const { id, name, status, origin, image, species, gender } = req.body;
+    console.log(req.body)
     
     if(!id || !name || !status || !origin || !image || !species || !gender)
       return res.status(401).send("Faltan datos") 
@@ -12,6 +13,7 @@ const postFav = async (req, res) => {
         })
 
         const favoritos = await Favorite.findAll();
+        
         return res.json(favoritos)
 
     } catch (error) {
