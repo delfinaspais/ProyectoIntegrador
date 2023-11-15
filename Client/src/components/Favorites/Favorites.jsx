@@ -8,6 +8,8 @@ import styles from "./Favorites.module.css";
 const Favorites = () => {
 
     const favorites = useSelector((state) => state.myFavorites) 
+
+    console.log("Favorites:", favorites)
     
     const [aux, setAux] = useState(false);
     
@@ -50,7 +52,7 @@ const Favorites = () => {
                     <option value="D">Descendente</option>
                 </select>
 
-                {favorites.map(({id, name, species, gender, image, origin, onClose}) => {
+                {favorites.map(({id, name, status, species, gender, image, origin, onClose}) => {
                     return (
                         <Card
                         key={id}
@@ -59,7 +61,8 @@ const Favorites = () => {
                         species={species}
                         gender={gender}
                         image={image}
-                        origin={origin.name}
+                        origin={origin}
+                        status={status}
                         onClose={onClose}
                         />
                      )

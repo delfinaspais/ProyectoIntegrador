@@ -9,17 +9,15 @@ import Favorites from './components/Favorites/Favorites.jsx';
 import styles from './App.module.css';
 import axios from "axios";
 
-const email = "delfi@gmail.com";
-const password = "1234abcd";
 
-const URL = 'http://localhost:3001/rickandmorty/login/';
+const URL = 'http://localhost:3001/rickandmorty/login';
 
 function App() {
    
    const [characters, setCharacters] = useState([]);  // PROP de characters en CARDS
    
    const location = useLocation();                    
-   const [access, setAccess] = useState(false)
+   const [access, setAccess] = useState(true)
    const navigate = useNavigate(); 
 
 
@@ -33,9 +31,10 @@ function App() {
       setAccess(access);
       access && navigate('/home');
       }
-
+      
       catch (error) {
-         console.log(error.message);
+         console.log("access", access)
+         console.log("no entro a login", error.message);
    }
 
 }
@@ -47,6 +46,8 @@ function App() {
         const onSearch = async (id) => {
                 try { 
                   const {data} = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`)
+
+                  console.log(data)
 
          if (data.name) {
                 setCharacters((oldChars) => [...oldChars, data])

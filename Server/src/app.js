@@ -6,7 +6,7 @@ const morgan = require("morgan");
 server.use(express.json());
 server.use(morgan("dev"));
 
-server.use((req, res, next) => { // permiso al front para acceder a rutas
+server.use((req, res, next) => { 
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', 'true');
     res.header(

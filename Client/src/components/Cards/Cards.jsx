@@ -2,11 +2,11 @@ import Card from '../Card/Card';
 import { CardsContainer } from "./styledComponents";
 
 const Cards = ({characters, onClose}) => {
-console.log(characters);
+console.log("HOLAA", characters);
    return (
 
       <CardsContainer>
-         {characters.map(({ id, type, location, name, origin, species, gender, image }) => { 
+         {characters.map(({ id, type, location, name, status, origin, species, gender, image }) => { 
             return (
 
                <Card                   
@@ -16,8 +16,9 @@ console.log(characters);
                name={name}
                species={species}
                gender={gender}
-               origin={origin.name}
+               origin={origin}
                image={image} 
+               status={status}
                onClose={onClose}
                />
                )

@@ -14,9 +14,9 @@ const validation = (inputs) => { // (userData)
         errors.email = "maximo 35 caracteres "
     }
 
-    if (!regexPass.test (inputs.email)) {
-        errors.email = "al menos un numero"
-    }
+    // if (!regexPass.test (inputs.email)) {
+    //     errors.email = "al menos un numero"
+    // }
 
     if(inputs.email.length < 6 && inputs.email.length > 10 ) {
         errors.email = "entre 6 y 10 caracteres "

@@ -10,6 +10,10 @@ const About = () => {
 
 export default About;
 
+
+
+
+// CLASS C
 // import React from "react";
 
 // class About extends React.Component {
