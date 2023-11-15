@@ -16,7 +16,11 @@ function Card ({id, name, species, gender, status, origin, image, onClose, remov
          removeFav(id)
       } else {
          setIsFav(true);
+<<<<<<< HEAD
          addFav({id, name, species, gender, status, origin, image, onClose, addFav, myFavorites})
+=======
+         addFav({id, name, species, gender, image, status, origin, onClose, addFav, myFavorites})
+>>>>>>> f37931a03f0149429fa24439018b767ee70dc1be
       }
    }
 
@@ -42,13 +46,17 @@ function Card ({id, name, species, gender, status, origin, image, onClose, remov
 
          </div>
          <div className={styles.dataContainer}>
-         <Link to={`/detail/${id}`}><h2> {name} </h2></Link>
+         <Link className="no-underline" to={`/detail/${id}`}><h2> {name} </h2></Link>
          <img className={styles.image} src={image} alt='imagen'  style={{ borderRadius: '70%', width: "110px", padding:"1em"}} /> 
             <h2> Name: {name} </h2>
 				<h2> Specie: {species} </h2>
 				<h2> Gender: {gender} </h2>
+<<<<<<< HEAD
 				<h2> Status: {status} </h2>
 				<h2> Origin: {origin} </h2>
+=======
+            <h2> Origin: {origin}</h2>
+>>>>>>> f37931a03f0149429fa24439018b767ee70dc1be
 				</div>
       </div>
    );

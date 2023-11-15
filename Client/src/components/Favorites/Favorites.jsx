@@ -52,17 +52,25 @@ const Favorites = () => {
                     <option value="D">Descendente</option>
                 </select>
 
+<<<<<<< HEAD
                 {favorites.map(({id, name, status, species, gender, image, origin, onClose}) => {
+=======
+                {favorites.map(({id, name, species, gender, image, origin, status, onClose}) => {
+>>>>>>> f37931a03f0149429fa24439018b767ee70dc1be
                     return (
                         <Card
                         key={id}
                         id={id}
                         name={name}
+                        status={status}
                         species={species}
                         gender={gender}
                         image={image}
                         origin={origin}
+<<<<<<< HEAD
                         status={status}
+=======
+>>>>>>> f37931a03f0149429fa24439018b767ee70dc1be
                         onClose={onClose}
                         />
                      )

@@ -6,13 +6,17 @@ console.log("HOLAA", characters);
    return (
 
       <CardsContainer>
+<<<<<<< HEAD
          {characters.map(({ id, type, location, name, status, origin, species, gender, image }) => { 
+=======
+         {characters.map(({ id, status, name, origin, species, gender, image }) => { 
+            
+>>>>>>> f37931a03f0149429fa24439018b767ee70dc1be
             return (
 
                <Card                   
                id={id}
-               type={type}
-               location={location}
+               status={status}
                name={name}
                species={species}
                gender={gender}

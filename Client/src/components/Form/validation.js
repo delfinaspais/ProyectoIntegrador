@@ -14,14 +14,19 @@ const validation = (inputs) => { // (userData)
         errors.email = "maximo 35 caracteres "
     }
 
+<<<<<<< HEAD
     // if (!regexPass.test (inputs.email)) {
     //     errors.email = "al menos un numero"
+=======
+    // if (!regexPass.test (inputs.password)) {
+    //     errors.password = "al menos un numero"
+>>>>>>> f37931a03f0149429fa24439018b767ee70dc1be
     // }
 
     if(inputs.email.length < 6 && inputs.email.length > 10 ) {
         errors.email = "entre 6 y 10 caracteres "
     }
-console.log(errors, "errors")
+
     return errors;
 
 }
