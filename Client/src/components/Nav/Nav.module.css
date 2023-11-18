@@ -1,27 +1,51 @@
+@font-face {
+    font-family: 'NombreDeLaFuente'; 
+    src: url('../../imagenes/shlop rg.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .container {
     width: 80%;
     margin: auto;
-    padding: 35px 0;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right:5px;
 }
 
 .navButton {
     backdrop-filter: blur(15px);
     color: #fff;
-	width: 8em;
-    height: 2.8em;
+	width: 5em;
+    height: 2.2em;
 	border-radius: 1em;
     border: #92b5b9;
 	background: transparent;
     border-radius: 20px;
 	padding: 0.8em;
+    font-family: 'NombreDeLaFuente';
+    font-size: 32px;
 } 
 
 .navButton:hover {
 	filter: brightness(150%);
+
+    
 }
+
+.logo {
+    width: 250px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: 140px;
+    position: absolute;
+    /*top: 0.2px;  Ajusta la posición del logo arriba del formulario */
+    left:9%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Corrige el centrado horizontal */
+    /* border-radius: 80%; */
+    margin-top: 1%;
+  }
+  
 
 /* .nav {
     background-color: rgb(230, 177, 177); 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./types.js"
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, CLEAN_FILTERS } from "./types.js"
 
 export const addFav = (character) => { 
     
@@ -55,6 +55,12 @@ export const orderCards = (order) => {
         payload: order
     }
 }
+
+export const cleanFilters = () => {
+    return {
+      type: CLEAN_FILTERS,
+    };
+  };
 
 
 

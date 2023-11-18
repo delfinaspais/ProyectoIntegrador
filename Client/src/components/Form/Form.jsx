@@ -1,6 +1,7 @@
 import style from "./Form.module.css"
 import { useState } from "react";
 import validation from "./validation.js";
+import logoImage from "./RIKIMORT.png";
 
 
 const Form = ({login}) => {
@@ -35,10 +36,15 @@ const Form = ({login}) => {
       
       <section>
         <div className={style.formbox}>
+        <img
+          src={logoImage} // Reemplaza 'ruta_del_logo.png' con la ruta correcta de tu logo
+          alt="Logo"
+          className={style.logo}
+        />
                     <form onSubmit={handleSubmit}> 
                     <h2>Login</h2>
                     <div className={style.inputbox}>
-                    <input type="text" name="email" value={userData.email} onChange={handleInputChange} />
+                    <input type="email" name="email" value={userData.email} onChange={handleInputChange} />
                         <label htmlFor="">Email</label>
                         <p className={style.errors}>{errors.email && errors.email}</p>
                     </div>

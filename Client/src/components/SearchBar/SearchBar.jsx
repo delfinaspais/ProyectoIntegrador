@@ -11,8 +11,8 @@ const SearchBar = ( {onSearch} ) => {                // Viene de App.
 
     return (
        <div className={style.bar}>
-            <input type='search' className={style.searchInput} onChange={handleChange}/>
-            <button className = {style.searchButton} onClick={() => onSearch(id)}> AGREGAR </button>
+            <input type='search' placeholder='Search character' className={style.searchInput} onChange={handleChange}/>
+            <button className = {style.searchButton} onClick={() => onSearch(id)}> SEARCH </button>
        </div>
     );
  };

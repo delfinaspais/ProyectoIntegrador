@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "../Card/Card";
-import { removeFav, filterCards, orderCards } from "../../redux/actions/actions";
+import { removeFav, filterCards, orderCards, cleanFilters } from "../../redux/actions/actions";
 import styles from "./Favorites.module.css";
 
 
@@ -29,12 +29,16 @@ const Favorites = () => {
         dispatch(filterCards(event.target.value));
         }
 
+        const handleCleanFilter = () => {
+            dispatch(cleanFilters());
+          };
+
 
     return (
+        <div>
         <div className={styles.favConteiner}>
-            <div>
-                
-                <select name="" id="" onChange={handleFilter}>
+                           
+                <select className={styles.button} name="" id="" onChange={handleFilter}>
                     <option value="" selected disabled>Filter by</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -42,21 +46,20 @@ const Favorites = () => {
                     <option value="Unknow">Unknow</option>
                 </select>
             
-            </div>
 
-            <div>
-                
-                <select name="" id="" onChange={handleOrder}>
+                <select className={styles.button} name="" id="" onChange={handleOrder}>
                     <option value="" selected disabled>Sort by</option>
-                    <option value="A">Ascendente</option>
-                    <option value="D">Descendente</option>
+                    <option value="A">Ascendent</option>
+                    <option value="D">Descendent</option>
                 </select>
 
-<<<<<<< HEAD
+                <button className={styles.buttonFilter} onClick={handleCleanFilter}>CLEAN FILTER</button>
+
+                </div>
+
+                <div className={styles.cardDiv}> 
+
                 {favorites.map(({id, name, status, species, gender, image, origin, onClose}) => {
-=======
-                {favorites.map(({id, name, species, gender, image, origin, status, onClose}) => {
->>>>>>> f37931a03f0149429fa24439018b767ee70dc1be
                     return (
                         <Card
                         key={id}
@@ -67,18 +70,13 @@ const Favorites = () => {
                         gender={gender}
                         image={image}
                         origin={origin}
-<<<<<<< HEAD
-                        status={status}
-=======
->>>>>>> f37931a03f0149429fa24439018b767ee70dc1be
                         onClose={onClose}
                         />
                      )
                 })}
 
             </div>
-
-         </div> 
+            </div>
     )
 }
 

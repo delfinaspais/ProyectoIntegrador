@@ -79,7 +79,7 @@ section{
 .formbox{
   position: relative;
   width: 400px;
-  height: 450px;
+  height: 600px;
   background: transparent;
   border: 2px solid rgba(255,255,255,0.5);
   border-radius: 20px;
@@ -140,4 +140,19 @@ top: -5px;
   font-size: 1em;
   font-weight: 600;
 }
+
+/* Form.module.css */
+
+/* ... Otros estilos ... */
+
+.logo {
+  width: 140px; /* Ajusta el tamaño del logo según tus necesidades */
+  height: 140px;
+  position: absolute;
+  top: 10px; /* Ajusta la posición del logo arriba del formulario */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Corrige el centrado horizontal */
+  border-radius: 80%;
+}
+
 

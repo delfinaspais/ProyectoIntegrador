@@ -1,20 +1,30 @@
+@font-face {
+    font-family: 'NombreDeLaFuente'; 
+    src: url('../../imagenes/shlop rg.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .bar {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	width: 30%;
+	margin-right: 5%;
 }
 
 .searchInput {
 	display: flex;
 	width: 16em;
-    height: 2.4em;
+    height: 2.9em;
 	border-radius: 0.5em;
     background-color: whitesmoke;
-	border-radius: 1em;
+	border-radius: 0.8em;
     border: #92b5b9;
-	padding: 0em;
+	padding: 1em;
+	margin-left: 10%;
+	margin-top: 4%;
 }
 
 .searchButton {
@@ -27,6 +37,9 @@
     border-radius: 20px;
     backdrop-filter: blur(15px);
 	padding: 0.8em;
+	font-family: 'NombreDeLaFuente';
+    font-size: 32px;
+	margin-top: 4%;
 }
 .searchButton:hover {
 	filter: brightness(150%);

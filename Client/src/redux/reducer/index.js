@@ -1,8 +1,10 @@
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "../actions/types";
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, CLEAN_FILTERS } from "../actions/types";
 
 const initialState = {
     myFavorites: [],
-    allCharacters: []
+    allCharacters: [],
+    filter: null,
+  order: null,
 }
 
 const rootReducer = (state = initialState, {type, payload}) => {  
@@ -42,6 +44,14 @@ const rootReducer = (state = initialState, {type, payload}) => {
                 })
                 
             }
+
+            
+    case CLEAN_FILTERS:
+        return {
+          ...state,
+          filter: null,
+          order: null,
+        };
             
         default: return { ...state } // Sucede si no se cumple nada de lo anterior
             
