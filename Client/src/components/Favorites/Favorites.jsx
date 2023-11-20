@@ -39,21 +39,21 @@ const Favorites = () => {
         <div className={styles.favConteiner}>
                            
                 <select className={styles.button} name="" id="" onChange={handleFilter}>
-                    <option value="" selected disabled>Filter by</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Genderless">Genderless</option>
-                    <option value="Unknow">Unknow</option>
+                    <option className={styles.option} value="" selected disabled>Filter by</option>
+                    <option className={styles.option} value="Male">Male</option>
+                    <option className={styles.option} value="Female">Female</option>
+                    <option className={styles.option} value="Genderless">Genderless</option>
+                    <option className={styles.option} value="Unknow">Unknow</option>
                 </select>
             
 
                 <select className={styles.button} name="" id="" onChange={handleOrder}>
-                    <option value="" selected disabled>Sort by</option>
-                    <option value="A">Ascendent</option>
-                    <option value="D">Descendent</option>
+                    <option className={styles.option} value="" selected disabled>Sort by</option>
+                    <option className={styles.option} value="A">Ascendent</option>
+                    <option className={styles.option} value="D">Descendent</option>
                 </select>
 
-                <button className={styles.buttonFilter} onClick={handleCleanFilter}>CLEAN FILTER</button>
+                <button value="all" className={styles.buttonFilter} onClick={handleCleanFilter}>CLEAN FILTER</button>
 
                 </div>
 

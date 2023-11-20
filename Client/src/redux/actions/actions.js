@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, CLEAN_FILTERS } from "./types.js"
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, CLEAN_FILTERS, SET_ORIGINAL_FAVS } from "./types.js"
 
 export const addFav = (character) => { 
     
@@ -56,24 +56,16 @@ export const orderCards = (order) => {
     }
 }
 
-export const cleanFilters = () => {
+export const setOriginalFavs = (originalFavs) => {
     return {
-      type: CLEAN_FILTERS,
+      type: SET_ORIGINAL_FAVS,
+      payload: originalFavs,
     };
   };
-
-
-
-
-
-
-
-
-
-// Actions instrucciones que llegan del reducer para ejecutar cambios de estados, son obketos,
-// propiedad mas imiortante es type
-
-// action = {
-//     type:
-//     payload:
-// }
+  
+  export const cleanFilters = () => {
+    return {
+      type: CLEAN_FILTERS,
+    //   payload: gender
+    };
+  };

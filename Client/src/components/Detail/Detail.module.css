@@ -1,7 +1,12 @@
-/* Detail.module.css */
 @font-face {
     font-family: 'NombreDeLaFuente'; 
     src: url('../../imagenes/shlop rg.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'NombreDeLaFuente2'; 
+    src: url('../../imagenes/palitoon.otf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
   }
@@ -34,7 +39,7 @@
   
   .detailsContainer {
     flex: 1;
-    padding: 15px;
+    padding: 10px;
     text-align: left;
   }
   
@@ -46,21 +51,26 @@
   }
 
   .detailsContainer h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
+    /* margin-bottom: 10px; */
+    font-size: 30px;
+    font-family: 'NombreDeLaFuente2';
   }
 
   .backButton {
     backdrop-filter: blur(15px);
     color: rgb(139, 107, 107);
-	width: 5em;
-    height: 1.8em;
+	width: 3em;
+    height: 1.5em;
 	border-radius: 1em;
     border: #92b5b9;
 	background: black;
     border-radius: 20px;
-	padding: 0.2em;
-  font-size: 20px;
+	/* padding: 0.2em; */
+  font-size: 30px;
+  font-family: 'NombreDeLaFuente2';
+  margin-top: 15px;
+
+  
 } 
 .backButton:hover {
 	filter: brightness(150%);

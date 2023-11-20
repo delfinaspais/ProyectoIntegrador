@@ -1,9 +1,15 @@
-/* @font-face {
+@font-face {
     font-family: 'NombreDeLaFuente2'; 
     src: url('../../imagenes/palitoon.otf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
-  } */
+  }
+  @font-face {
+    font-family: 'NombreDeLaFuente'; 
+    src: url('../../imagenes/shlop rg.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
 
 .container {
     width:  300px;
@@ -31,21 +37,26 @@
 
 .buttonContainer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex;
     /* background-color: aliceblue; */
-    justify-content: right;
+    justify-content: flex;
+    height: 40px;
+    /* background-color: blue; */
     }
 
 .buttonContainer button {
     flex-direction: row;
     border: 0px;
-    width: fit-content;
-    height: fit-content;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
     transition: 0.5s;
     background: transparent;
     font-size: 1em; /* Puedes ajustar el tamaño según tus necesidades */
   margin: 0.2em;
+  margin-right: 247px;
+  
+  /* background-color: red; */
     
 }
 
@@ -55,27 +66,28 @@
 }
 
 .dataContainer h1 {
-    margin: 2px;
-    font-size: 30px;
+    /* margin: 2px; */
+    font-size: 50px;
     /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     color: rgb(0, 0, 0);
+    font-family: 'NombreDeLaFuente';
     /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif */
 }
 
 .dataContainer h2 {
-    margin: 2px;
-    font-size: 24px;
-    color: black
-
+    /* margin: 2px; */
+    font-size: 30px;
+    color: black;
+font-family: 'NombreDeLaFuente2'
         /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
     /* 'NombreDeLaFuente' */
 }
 
-.dataContainer h4 {
+/* .dataContainer h4 {
     margin: 2 px;
     font-size: 4 px;
     font-weight: 100;
-}
+} */
 
 .container img {
     width: "20px";

@@ -26,14 +26,14 @@ function Card ({id, name, species, gender, status, origin, image, onClose, remov
             setIsFav(true);
          }
       });
-   }, [myFavorites]);
+   }, [myFavorites, id]);
    //[myFavorites, id]);
    
 
    return ( 
       <div className = {styles.container}>
          <div className={styles.buttonContainer}>
-         <button onClick={() => onClose(id)}>X</button> 
+         <button style={{marginLeft:"10px"}}onClick={() => onClose(id)}>X</button> 
 
          { isFav ? 
          ( <button onClick={handleFavorite}>❤️</button> )
@@ -43,7 +43,7 @@ function Card ({id, name, species, gender, status, origin, image, onClose, remov
          </div>
          <div className={styles.dataContainer}>
          <Link className="no-underline" to={`/detail/${id}`}><h1> {name} </h1></Link>
-         <img className={styles.image} src={image} alt='imagen'  style={{ borderRadius: '20%', width: "150px", padding:"1em"}} /> 
+         <img className={styles.image} src={image} alt='imagen'  style={{ borderRadius: '15%', width: "170px", padding:"1em"}} /> 
          
 				<h2> {species} </h2>
 				<h2> {gender} </h2>

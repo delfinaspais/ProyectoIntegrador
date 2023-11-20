@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'NombreDeLaFuente'; 
+    src: url('../../imagenes/shlop rg.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'NombreDeLaFuente2'; 
+    src: url('../../imagenes/palitoon.otf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 500px;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 15px;
+    text-align:center;
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    margin-left: 15%;
+   
+  }
+
+  .content h1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-family: 'NombreDeLaFuente2';
+    font-size: 50px;
+    
+
+  }
+
+  .content h2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-family: 'NombreDeLaFuente2';
+    font-size: 35px;
+
+  }
