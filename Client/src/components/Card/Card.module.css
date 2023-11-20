@@ -92,6 +92,17 @@ font-family: 'NombreDeLaFuente2'
 .container img {
     width: "20px";
     border-radius: "70%";
+    border-width: 60%;
+  
 }
+
+.logo {
+        width: 90px; /* Ajusta el tamaño del logo según tus necesidades */
+        height: 90px;
+        border-radius: 80%;
+        /* margin: 0.2em; */
+        margin-left: 1em;
+
+       }
 
 

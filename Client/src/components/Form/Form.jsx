@@ -36,11 +36,7 @@ const Form = ({login}) => {
       
       <section>
         <div className={style.formbox}>
-        <img
-          src={logoImage} // Reemplaza 'ruta_del_logo.png' con la ruta correcta de tu logo
-          alt="Logo"
-          className={style.logo}
-        />
+        <img src={logoImage} alt="Logo" className={style.logo} />
                     <form onSubmit={handleSubmit}> 
                     <h2>Login</h2>
                     <div className={style.inputbox}>

@@ -45,5 +45,7 @@
     flex-direction: row;
     font-family: 'NombreDeLaFuente2';
     font-size: 35px;
+    color: rgba(0, 0, 0, 0.815);
+    padding: 4px;
 
   }

@@ -1,32 +1,33 @@
-const validation = (inputs) => { // (userData)
-    
+const validation = (inputs) => {
     const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    const regexPass = new RegExp("[0-9]");
+    const regexPass = /\d/; // Al menos un número en la contraseña
     const errors = {};
- 
-    if (!regexEmail.test (inputs.email)) {
-        errors.email = "email invalido"
+
+    if (!regexEmail.test(inputs.email)) {
+        errors.email = "Email invalido";
     }
+
     if (!inputs.email) {
-        errors.email = "el nombre es obligatorio"
-    }
-    if(inputs.email.length > 35) {
-        errors.email = "maximo 35 caracteres "
+        errors.email = "El email es obligatorio";
     }
 
-    // if (!regexPass.test (inputs.email)) {
-    //     errors.email = "al menos un numero"
-    // }
+    if (inputs.email.length > 35) {
+        errors.email = "Máximo 35 caracteres";
+    }
 
-    if(inputs.email.length < 6 && inputs.email.length > 10 ) {
-        errors.email = "entre 6 y 10 caracteres "
+    if (!regexPass.test(inputs.password)) {
+        errors.password = "Al menos un número";
+    }
+
+    if (inputs.password.length < 6 || inputs.password.length > 10) {
+        errors.password = "La contraseña debe tener entre 6 y 10 caracteres";
     }
 
     return errors;
-
-}
+};
 
 export default validation;
+
 
 
 

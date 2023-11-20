@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { addFav, removeFav } from "../../redux/actions/actions";
 import {connect} from "react-redux";
 import { useState, useEffect } from "react";
+import logoImg from "./logoImg.png";
 
 
 function Card ({id, name, species, gender, status, origin, image, onClose, removeFav, addFav, myFavorites}) { 
@@ -45,10 +46,11 @@ function Card ({id, name, species, gender, status, origin, image, onClose, remov
          <Link className="no-underline" to={`/detail/${id}`}><h1> {name} </h1></Link>
          <img className={styles.image} src={image} alt='imagen'  style={{ borderRadius: '15%', width: "170px", padding:"1em"}} /> 
          
-				<h2> {species} </h2>
-				<h2> {gender} </h2>
-				<h2> {status} </h2>
+				<h2>~ {species} ~</h2>
+				<h2>~ {gender} ~</h2>
+				<h2>~ {status} ~</h2>
 				{/* <h2> {origin} </h2> */}
+{/* <img src={logoImg} alt="Logo" className={styles.logo} /> */}
 				</div>
       </div>
    );
